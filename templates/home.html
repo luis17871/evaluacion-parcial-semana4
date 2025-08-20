@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block content %}
+  <h1>Examen Parcial 1 - Autenticación Segura</h1>
+  <div class="card">
+    <p>Este proyecto corresponde al <b>Examen Parcial 1</b> y demuestra un sistema de 
+    <b>registro</b> y <b>login</b> con contraseñas protegidas usando <b>Argon2</b> y 
+    almacenadas de forma segura en <b>SQLite</b>.</p>
+    {% if user %}
+      <p>Has iniciado sesión correctamente como <b>{{ user }}</b>.</p>
+    {% else %}
+      <p>Por favor, inicia sesión o crea una cuenta para continuar.</p>
+    {% endif %}
+  </div>
+{% endblock %}
